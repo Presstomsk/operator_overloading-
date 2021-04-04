@@ -1,9 +1,9 @@
-#include<iostream>
+п»ї#include<iostream>
 using namespace std;
 
 #define tab "\t"
 
-class Point //Тип данных Point
+class Point //РўРёРї РґР°РЅРЅС‹С… Point
 {
 	double x;
 	double y;
@@ -156,14 +156,14 @@ void main()
 
 #ifdef STRUCT
 	//type name;
-	int a; // Объявляем переменную 'a' типа 'int'
-	Point A; // Объявляем переменную 'A' типа 'Point'
-			 // Объявляем объект структуры 'Point'
-			 // Создаем экземпляр структуры 'Point'
+	int a; // РћР±СЉСЏРІР»СЏРµРј РїРµСЂРµРјРµРЅРЅСѓСЋ 'a' С‚РёРїР° 'int'
+	Point A; // РћР±СЉСЏРІР»СЏРµРј РїРµСЂРµРјРµРЅРЅСѓСЋ 'A' С‚РёРїР° 'Point'
+			 // РћР±СЉСЏРІР»СЏРµРј РѕР±СЉРµРєС‚ СЃС‚СЂСѓРєС‚СѓСЂС‹ 'Point'
+			 // РЎРѕР·РґР°РµРј СЌРєР·РµРјРїР»СЏСЂ СЃС‚СЂСѓРєС‚СѓСЂС‹ 'Point'
 	A.x = 2;
 	A.y = 3;
 	cout << A.x << tab << A.y << endl;
-	Point* pA = &A; //Создаем указатель на 'Point'
+	Point* pA = &A; //РЎРѕР·РґР°РµРј СѓРєР°Р·Р°С‚РµР»СЊ РЅР° 'Point'
 	cout << pA->x << tab << pA->y << endl;
 #endif // STRUCT
 #ifdef CONSTRUCTORS_CHECK
@@ -206,9 +206,9 @@ void main()
 	A++.print();	A.print();*/
 	cout << A << endl;
 	cout << B << endl;
-	cout << "Введите координаты точки: ";
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ С‚РѕС‡РєРё: ";
 	cin >> A;
-	cout << "Вы ввели: " << A << endl;
+	cout << "Р’С‹ РІРІРµР»Рё: " << A << endl;
 
 #endif// STREAMS
 #ifdef OPERATOR()
@@ -216,11 +216,11 @@ void main()
 	Point B(2, 3);
 	/*if (A == B)
 	{
-		cout<<"Точки равны"<<endl;
+		cout<<"РўРѕС‡РєРё СЂР°РІРЅС‹"<<endl;
 	}
 	else
 	{
-		cout << "Точки разные" << endl;
+		cout << "РўРѕС‡РєРё СЂР°Р·РЅС‹Рµ" << endl;
 	}*/
 	cout << (A != B) << endl;
 	A(33, 44);
@@ -229,7 +229,7 @@ void main()
 
 	Point A(6, 8);
 	Point B(8, 12);
-	cout << "Расстояние между точками А и В равно: " << A.distance(B) << endl;
-	cout << "Расстояние между точками А и В равно: " << distance(A, B) << endl;
+	cout << "Р Р°СЃСЃС‚РѕСЏРЅРёРµ РјРµР¶РґСѓ С‚РѕС‡РєР°РјРё Рђ Рё Р’ СЂР°РІРЅРѕ: " << A.distance(B) << endl;
+	cout << "Р Р°СЃСЃС‚РѕСЏРЅРёРµ РјРµР¶РґСѓ С‚РѕС‡РєР°РјРё Рђ Рё Р’ СЂР°РІРЅРѕ: " << distance(A, B) << endl;
 
 }
