@@ -99,7 +99,17 @@ public:
 	{
 		cout << "X= " << x << tab << "Y= " << y << endl;
 	}
+	double distance(const Point& other)const
+	{
+		return (double)sqrt(pow(other.x-this->x,2)+pow(other.y-this->y,2));
+	}
 };
+
+double distance(const Point& A, const Point& B)
+{
+return (double)sqrt(pow(A.get_x() - B.get_x(), 2) + pow(A.get_y() - B.get_y(), 2));
+}
+
 Point operator+(const Point& left, const Point& right)
 {
 	Point result;
@@ -137,6 +147,8 @@ bool operator!=(const Point& left, const Point& right)
 //#define CONSTRUCTORS_CHECK;
 //#define ASSIGNMENT_CHECK;
 //#define STREAMS;
+//#define OPERATOR();
+
     
 void main()
 {
@@ -199,6 +211,7 @@ void main()
 	cout << "Вы ввели: " << A << endl;
 
 #endif// STREAMS
+#ifdef OPERATOR()
 	Point A(2, 3);
 	Point B(2, 3);
 	/*if (A == B)
@@ -212,6 +225,11 @@ void main()
 	cout << (A != B) << endl;
 	A(33, 44);
 	A.print();
+#endif//OPERATOR()
 
+	Point A(6, 8);
+	Point B(8, 12);
+	cout << "Расстояние между точками А и В равно: " << A.distance(B) << endl;
+	cout << "Расстояние между точками А и В равно: " << distance(A, B) << endl;
 
 }
