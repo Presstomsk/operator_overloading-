@@ -148,7 +148,7 @@ bool operator!=(const Point& left, const Point& right)
 //#define ASSIGNMENT_CHECK;
 //#define STREAMS;
 //#define OPERATOR();
-
+#define TYPE_CONVERSIONS
     
 void main()
 {
@@ -231,5 +231,18 @@ void main()
 	Point B(8, 12);
 	cout << "Расстояние между точками А и В равно: " << A.distance(B) << endl;
 	cout << "Расстояние между точками А и В равно: " << distance(A, B) << endl;
+#ifdef TYPE_CONVERSIONS
+	//явное преобразование числа 43 в char
+	cout << (char)43 << endl;//C-like style
+	cout << char(43) << endl;//Functional style
+	//неявное преобразование
+	int a = 2;//No conversion
+	double b = 3.4;//No conversion
+	cout << a / b << endl;//Оператор * неявно преобразует переменную 'a' в тип double
+	                      //Чтобы вернуть результат double
+	double c = 4;//От меньшего к большему
+	int d = c;//От большего к меньшему без потери данных
+	int e = 2.5;//От большего к меньшему c потерей данных
 
+	#endif
 }
